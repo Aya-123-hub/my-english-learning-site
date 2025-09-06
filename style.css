@@ -1,0 +1,59 @@
+/* General reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #00ccff;
+  text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
+}
+
+/* Container for all cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  background: #1a1a1a;
+  border: 2px solid #00ccff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.9),
+              0 0 24px rgba(0, 200, 255, 0.6),
+              0 0 36px rgba(0, 200, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1),
+              0 0 40px rgba(0, 255, 255, 0.8),
+              0 0 60px rgba(0, 255, 255, 0.6);
+}
+
+/* Card text */
+.card h2 {
+  margin: 0 0 10px;
+  color: #00ccff;
+  font-size: 1.4rem;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
