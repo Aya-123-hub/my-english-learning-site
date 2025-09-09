@@ -2,19 +2,20 @@ fetch('data.json')
   .then(response => response.json())
   .then(data => {
     const container = document.createElement('div');
-    container.className = 'container';
+    container.className = 'cards';   // 👈 use "cards" not "container"
 
     data.forEach(item => {
       const card = document.createElement('div');
       card.className = 'card';
       card.innerHTML = `
-        <div class="expression">${item.expression}</div>
-        <div class="translation">Arabic: ${item.arabic}</div>
-        <div class="translation">Indonesian: ${item.indonesian}</div>
-        <div class="example">Example: ${item.example}</div>
+        <h2>${item.expression}</h2>
+        <p>${item.arabic}</p>
+        <p>${item.indonesian}</p>
+        <p><i>${item.example}</i></p>
       `;
       container.appendChild(card);
     });
 
     document.body.appendChild(container);
   });
+
