@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif; /* modern & clean font */
   background: #0d0d0d;
   color: #fff;
   text-align: center;
@@ -46,14 +46,35 @@ h1 {
               0 0 60px rgba(0, 255, 255, 0.6);
 }
 
-/* Card text */
+/* Expression text (main phrase) */
 .card h2 {
   margin: 0 0 10px;
-  color: #00ccff;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00e6ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 8px rgba(0, 230, 255, 0.9),
+    0 0 16px rgba(0, 230, 255, 0.7),
+    0 0 24px rgba(0, 230, 255, 0.5);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Subtext (translation or explanation) */
 .card p {
-  margin: 5px 0;
+  margin: 8px 0;
   font-size: 1rem;
+  color: #f2f2f2;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
+
+/* Expression hover effect */
+.card:hover h2 {
+  transform: scale(1.1);
+  color: #00ffff;
+}
+
+
