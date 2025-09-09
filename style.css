@@ -26,16 +26,31 @@ h1 {
   margin: 0 auto;
 }
 
-/* Card */
-.card {
-  background: #1a1a1a;
-  border: 2px solid #00ccff;
-  border-radius: 12px;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   padding: 20px;
-  box-shadow: 0 0 12px rgba(0, 200, 255, 0.9),
-              0 0 24px rgba(0, 200, 255, 0.6),
-              0 0 36px rgba(0, 200, 255, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  /* Added for scroll */
+  max-height: 600px;    /* limit height */
+  overflow-y: auto;     /* enable vertical scrolling */
+  scrollbar-width: thin;  /* Firefox */
+  scrollbar-color: #00ccff #1a1a1a; /* custom scrollbar */
+}
+
+/* Custom scrollbar for Chrome/Edge */
+.cards::-webkit-scrollbar {
+  width: 8px;
+}
+.cards::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+.cards::-webkit-scrollbar-thumb {
+  background-color: #00ccff;
+  border-radius: 10px;
 }
 
 /* Hover effect */
