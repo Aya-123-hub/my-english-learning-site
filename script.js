@@ -1,9 +1,7 @@
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    const container = document.createElement('div');
-    container.className = 'cards';   // 👈 use "cards" not "container"
-
+    const container = document.getElementById('cards-container'); // ✅ use existing container
     data.forEach(item => {
       const card = document.createElement('div');
       card.className = 'card';
@@ -15,7 +13,5 @@ fetch('data.json')
       `;
       container.appendChild(card);
     });
-
-    document.body.appendChild(container);
   });
 
