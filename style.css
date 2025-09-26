@@ -2,13 +2,17 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', Arial, sans-serif; /* modern & clean font */
+  font-family: 'Poppins', Arial, sans-serif;
   background: #0d0d0d;
   color: #fff;
   text-align: center;
+
+  /* ✅ allow full page scrolling */
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
-/* Headings */
+/* Heading */
 h1 {
   margin: 20px 0;
   font-size: 2.5rem;
@@ -16,7 +20,7 @@ h1 {
   text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
 }
 
-/* Container for all cards */
+/* Container for cards */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -24,21 +28,24 @@ h1 {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
-  /* ✅ Allow full page scroll */
+
+  /* ❌ make sure these are removed:
+     max-height
+     overflow-y
+  */
 }
 
-/* Individual card styling */
+/* Card styling */
 .card {
-  background: #1a1a1a;              /* dark background for contrast */
-  border: 2px solid #00ccff;        /* glowing border */
-  border-radius: 12px;              /* rounded corners */
-  padding: 20px;                    /* breathing space inside */
-  text-align: left;                 /* align text neatly */
+  background: #1a1a1a;
+  border: 2px solid #00ccff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 12px rgba(0, 204, 255, 0.3);
 }
 
-/* Keep hover but with more emphasis */
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 1),
@@ -46,7 +53,7 @@ h1 {
   border-color: #00ffff;
 }
 
-/* Expression text (main phrase) */
+/* Main expression */
 .card h2 {
   margin: 0 0 12px;
   font-size: 1.6rem;
@@ -55,7 +62,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* Translation texts */
+/* Translations */
 .card p {
   margin: 6px 0;
   font-size: 1rem;
@@ -63,11 +70,12 @@ h1 {
   line-height: 1.4;
 }
 
-/* Example sentence in italics, lighter color */
+/* Example sentence */
 .card p:last-child {
   font-style: italic;
   color: #cccccc;
 }
+
 
 
 
