@@ -1,95 +1,44 @@
-/* General reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', Arial, sans-serif; /* modern & clean font */
-  background: #0d0d0d;
-  color: #fff;
-  text-align: center;
+/* Individual card styling */
+.card {
+  background: #1a1a1a;              /* dark background for contrast */
+  border: 2px solid #00ccff;        /* glowing border */
+  border-radius: 12px;              /* rounded corners */
+  padding: 20px;                    /* breathing space inside */
+  text-align: left;                 /* align text neatly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 204, 255, 0.3);
 }
 
-/* Headings */
-h1 {
-  margin: 20px 0;
-  font-size: 2.5rem;
-  color: #00ccff;
-  text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
-}
-
-/* Container for all cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-
-  /* Added for scroll */
-  max-height: 600px;    /* limit height */
-  overflow-y: auto;     /* enable vertical scrolling */
-  scrollbar-width: thin;  /* Firefox */
-  scrollbar-color: #00ccff #1a1a1a; /* custom scrollbar */
-}
-
-/* Custom scrollbar for Chrome/Edge */
-.cards::-webkit-scrollbar {
-  width: 8px;
-}
-.cards::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-.cards::-webkit-scrollbar-thumb {
-  background-color: #00ccff;
-  border-radius: 10px;
-}
-
-/* Hover effect */
+/* Keep hover but with more emphasis */
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 1),
-              0 0 40px rgba(0, 255, 255, 0.8),
-              0 0 60px rgba(0, 255, 255, 0.6);
+              0 0 40px rgba(0, 255, 255, 0.6);
+  border-color: #00ffff;
 }
 
 /* Expression text (main phrase) */
 .card h2 {
-  margin: 0 0 10px;
-  font-size: 1.8rem;
+  margin: 0 0 12px;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #00e6ff;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 
-    0 0 8px rgba(0, 230, 255, 0.9),
-    0 0 16px rgba(0, 230, 255, 0.7),
-    0 0 24px rgba(0, 230, 255, 0.5);
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Subtext (translation or explanation) */
+/* Translation texts */
 .card p {
-  margin: 8px 0;
+  margin: 6px 0;
   font-size: 1rem;
   color: #f2f2f2;
-  font-style: italic;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
-/* Expression hover effect */
-.card:hover h2 {
-  transform: scale(1.1);
-  color: #00ffff;
+/* Example sentence in italics, lighter color */
+.card p:last-child {
+  font-style: italic;
+  color: #cccccc;
 }
+
 
 
