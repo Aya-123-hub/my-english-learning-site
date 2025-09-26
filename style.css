@@ -6,13 +6,9 @@ body {
   background: #0d0d0d;
   color: #fff;
   text-align: center;
-
-  /* ✅ allow full page scrolling */
-  min-height: 100vh;
-  overflow-y: auto;
 }
 
-/* Heading */
+/* Headings */
 h1 {
   margin: 20px 0;
   font-size: 2.5rem;
@@ -20,32 +16,28 @@ h1 {
   text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
 }
 
-/* Container for cards */
+/* Container for all cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 30px;
+  max-width: 1200px;
   margin: 0 auto;
-
-  /* ❌ make sure these are removed:
-     max-height
-     overflow-y
-  */
 }
 
-/* Card styling */
+/* Individual card styling */
 .card {
   background: #1a1a1a;
   border: 2px solid #00ccff;
   border-radius: 12px;
   padding: 20px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 0 12px rgba(0, 204, 255, 0.3);
 }
 
+/* Hover effect */
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 1),
@@ -53,7 +45,7 @@ h1 {
   border-color: #00ffff;
 }
 
-/* Main expression */
+/* Expression text (main phrase) */
 .card h2 {
   margin: 0 0 12px;
   font-size: 1.6rem;
@@ -62,7 +54,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* Translations */
+/* Translation texts */
 .card p {
   margin: 6px 0;
   font-size: 1rem;
