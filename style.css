@@ -1,3 +1,32 @@
+/* General reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif; /* modern & clean font */
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #00ccff;
+  text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
+}
+
+/* Container for all cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* ✅ Allow full page scroll */
+}
+
 /* Individual card styling */
 .card {
   background: #1a1a1a;              /* dark background for contrast */
@@ -39,6 +68,7 @@
   font-style: italic;
   color: #cccccc;
 }
+
 
 
 
