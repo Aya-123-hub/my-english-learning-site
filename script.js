@@ -1,7 +1,8 @@
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    const container = document.getElementById('cards-container'); // ✅ use existing container
+    const container = document.getElementById('cards-container'); // ✅ use existing div
+
     data.forEach(item => {
       const card = document.createElement('div');
       card.className = 'card';
@@ -14,4 +15,5 @@ fetch('data.json')
       container.appendChild(card);
     });
   });
+
 
